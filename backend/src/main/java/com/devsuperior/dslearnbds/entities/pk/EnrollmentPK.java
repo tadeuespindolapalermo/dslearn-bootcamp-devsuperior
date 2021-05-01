@@ -11,19 +11,17 @@ import com.devsuperior.dslearnbds.entities.User;
 
 @Embeddable
 public class EnrollmentPK implements Serializable {
-
 	private static final long serialVersionUID = 1L;
 
 	@ManyToOne
 	@JoinColumn(name = "user_id")
 	private User user;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "offer_id")
 	private Offer offer;
-
+	
 	public EnrollmentPK() {
-
 	}
 
 	public EnrollmentPK(User user, Offer offer) {
@@ -78,5 +76,4 @@ public class EnrollmentPK implements Serializable {
 			return false;
 		return true;
 	}
-
 }
